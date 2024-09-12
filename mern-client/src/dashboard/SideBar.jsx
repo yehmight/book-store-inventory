@@ -8,7 +8,7 @@ import { AuthContext } from '../contexts/AuthProvider';
 
 const SideBar = () => {
   const {user} = useContext(AuthContext);
-  console.log(user)
+  // console.log(user)
   return (
     <Sidebar aria-label="Sidebar with content separator example" className='bg-gray-600 '>
         <Sidebar.Logo href="/" img={user?.photoURL} imgAlt="Flowbite logo" className="w-16 h-16">
