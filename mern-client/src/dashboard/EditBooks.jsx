@@ -31,7 +31,7 @@ const EditBooks = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:5000/book/${id}`, {
+      const response = await fetch(`https://book-store-inventory.onrender.com/book/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json"
