@@ -45,7 +45,7 @@ import Logout from "../components/Logout";
             element: <SingleBook />,
             loader: async ({ params }) => {
               try {
-                const response = await fetch(`http://localhost:5000/book/${params.id}`);
+                const response = await fetch(`https://book-store-inventory.onrender.com/book/${params.id}`);
                 if (!response.ok) {
                   throw new Error('Network response was not ok');
                 }
@@ -80,7 +80,7 @@ import Logout from "../components/Logout";
           path: "/admin/dashboard/edit-books/:id",
           element: <EditBooks />,
           loader: async ({ params }) => {
-            const response = await fetch(`http://localhost:5000/book/${params.id}`);
+            const response = await fetch(`https://book-store-inventory.onrender.com/book/${params.id}`);
             if (!response.ok) {
               throw new Response('Error fetching book data', { status: response.status });
             }
