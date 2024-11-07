@@ -27,7 +27,7 @@ const UploadBook = () => {
     };
 
     try {
-      const response = await fetch("http://localhost:5000/upload.book", {
+      const response = await fetch("https://book-store-inventory.onrender.com/upload.book", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
