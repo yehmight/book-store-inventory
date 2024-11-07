@@ -6,13 +6,13 @@ import { Link } from 'react-router-dom';
 const ManageBooks = () => {
   const[allBooks, setAllBooks] = useState([]);
   useEffect( () => {
-    fetch("http://localhost:5000/all.books").then(res => res.json()).then(data => setAllBooks(data));
+    fetch("https://book-store-inventory.onrender.com/all.books").then(res => res.json()).then(data => setAllBooks(data));
   },[])
 
   // delete a books
   const handleDelete = (id) =>{
     console.log(id);
-    fetch( `http://localhost:5000/book/${id}`, {
+    fetch( `https://book-store-inventory.onrender.com/book/${id}`, {
       method: "DELETE",
     }).then(res => res.json()).then(data => {
        alert("Book is deleted successfully!")
